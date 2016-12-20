@@ -13,18 +13,18 @@ public MineSweeper(){
 //== do I need a method over the switch statemente? or is the switch statement a method in itself? ==//
 public void gameSelection(int level){
   switch(level){
-    case 1: MineSweeper.easyLevel();
+    case 1: mines = new mines[10][10];
     break;
-    case 2: MineSweeper.mediumLevel();
+    case 2: mines = new mines[20][20]);
     break;
-    case 3: MineSweeper.hardLevel();
+    case 3: mines = new mines[30][30];
     break;
-    default: MineSweeper.easyLevel();
-//== or: case 1 : mines = new mines[10][10];
-//== case 2: mines = new mines[20][20];
-//== case 3: mines = new mines[30][30];  then do a for loop to assign boolean
-// values to everything
-
+    default: mines = new mines[10][10];
+for(i=0; i<mines.length; i++){
+  for(j=0; j< mines[i].length; j++){
+    mines[i][j] = rand.nextBoolean();
+  }
+}
 
   }
 }
